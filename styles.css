@@ -7,7 +7,9 @@
 }
 
 /* ********************************header */
-
+body {
+    overflow-x: hidden;
+}
 header {
     background-color: #cbeceb;
 }
@@ -43,21 +45,28 @@ img {
 nav {
     display: flex;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 50px;
 }
-
 nav label {
     font-size: 2em;
+    color: rgb(61, 61, 61);
+    position: absolute;
 }
-
 nav input[type=checkbox] {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     left: 0;
-    opacity: 0.5;
+    opacity: 0;
 }
-
-nav label::before {
+nav input[type=checkbox]:active .menu1 {
+    display: block;
+    z-index: 5;
+} 
+nav:before {
     content: "";
     width: 100%;
     height: 100%;
@@ -180,6 +189,18 @@ nav ul {
     background-color: #5ad5d2;
     border-radius: 25px;
 }
+@media (max-width: 1164px) {
+    .gridsoin {
+        display: flex;
+        flex-direction: column;
+    }
+    .gridsoin div {
+        scale: 1.1;
+    }
+    .soin {
+        margin: 50px 0;
+    }
+}
 .gridsoin p {
     display: none;
 }
@@ -193,12 +214,27 @@ nav ul {
 .about {
     margin: 50px 100px;
     display: flex;
+    margin-right: 0px;
 }
 .Apropos {
     width: 40%;
     padding: 50px;
     border-radius: 30px;
     background-color: #ff85ff;
+}
+@media (max-width: 1585px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .Qualite {
+        transform: translateY(150px);
+        margin-bottom: 200px;
+    }
+    .Apropos {
+        width: 70%;
+    }
 }
 .Apropos p {
     font-size: 1.3em;
@@ -274,6 +310,23 @@ nav ul {
     display: flex;
     padding: 50px 15%;
     background-color: #ff85ff59;
+}
+@media (max-width: 1377px) {
+    .appointment {
+        padding: 50px 5%;
+    }
+}
+@media (max-width: 1079px) {
+    .appointment {
+        flex-direction: column;
+        align-items: center;
+    }
+    .appointment div {
+        margin: 50px;
+    }
+    .appointment h3 {
+        margin-bottom: 30px;
+    }
 }
 .appointment div:nth-child(1) {
     display: flex;
@@ -425,6 +478,89 @@ nav ul {
 /* ************************contact */
 .contact {
     display: flex;
-    background-color: #b4b4b436;
-    padding: 50px 15%;
+    padding: 50px 5%;
+    background-color: rgba(162, 208, 250, 0.541);
+}
+.contact div {
+    width: 50%;
+    background-color: rgba(51, 185, 247, 0.562);
+    font-size: 1.6em;
+    margin-right: 20px;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact div * {
+    transition: 1s;
+}
+.contact div:hover * {
+    scale: 1.4;
+    color: rgba(32, 132, 179, 0.562);
+    transition: 1s;
+}
+.contact form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+}
+/* ************************facts */
+.facts {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+}
+.facts *{
+    margin: 0 10px;
+}
+.chiffres {
+    display: flex;
+    align-items: center;
+}
+.facts img {
+    width: 40px;
+}
+.stats {
+    display: flex;
+}
+.stats div {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.témoignage {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.témoignage div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chiffres h3 {
+    text-decoration: underline;
+}
+/* *****************************************footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer * {
+    text-align: center;
+}
+footer *:hover {
+    scale: 1.03;
+}
+footer a {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-decoration: none;
+    color: #ff85ff;
+}
+footer ul {
+    list-style-type: none;
 }
