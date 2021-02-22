@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ********************************header */
+
+header {
+    background-color: #cbeceb;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header h1 a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #2963e0
+}
+
+header p {
+    color: #2963e0;
+    font-size: 1.8em;
+}
+
+header img {
+    width: auto;
+}
+
+img {
+    width: 200px;
+}
+
+/* ***********************************nav */
+
+nav {
+    display: flex;
+    position: relative;
+}
+
+nav label {
+    font-size: 2em;
+}
+
+nav input[type=checkbox] {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0.5;
+}
+
+nav label::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: cornflowerblue;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu1 {
+    display: none;
+}
+
+.menu2 {
+    display: none;
+}
+
+nav ul {
+    /* display: none; */
+}
+/* *************************baniere acceuile */
+.banniereAccueil {
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    position: relative;
+    color: #222;
+}
+.banniereAccueil div * {
+    color: #222;
+}
+.banniereAccueil a {
+    color: #ff85ff;
+}
+.banniereAccueil:hover:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(109, 189, 255, 0.1);
+    position: absolute;
+}
+.banniereAccueil div {
+    padding: 20px 50px;
+    font-size: 2em;
+    position: relative;
+}
+.banniereAccueil img {
+    width: 300px;
+}
+/* **********************info */
+.info {
+    margin-top: 50px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+}
+.info span {
+    font-size: 4em;
+}
+.info div {
+    display: grid;
+    column-gap: 150px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.info div div:hover {
+    scale: 1.05;
+    transition: 0.5s;
+}
+.info div div {
+    background: linear-gradient(#00bfb9ab,  white);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    box-shadow: -5px 5px 10px 5px rgb(232, 250, 253);
+    transition: 0.5s scale;
+}
+.info div div div {
+    display: flex;
+    box-shadow: none;
+    background: none;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+/* *****************************services */
+.services {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.soin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.soin:nth-child() {
+    background-color: teal;
+}
+.gridsoin {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    row-gap: 150px;
+    column-gap: 200px;
+}
+.gridsoin div {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 450px;
+    height: 300px;
+    margin:auto;
+    background-color: #5ad5d2;
+    border-radius: 25px;
+}
+.gridsoin p {
+    display: none;
+}
+.gridsoin div:hover p {
+    display: block;
+}
+.services h6 {
+    font-size: 2em;
+}
+/* ********************about */
+.about {
+    margin: 50px 100px;
+    display: flex;
+}
+.Apropos {
+    width: 40%;
+    padding: 50px;
+    border-radius: 30px;
+    background-color: #ff85ff;
+}
+.Apropos p {
+    font-size: 1.3em;
+    color: #eee;
+}
+.about h3 {
+    font-size: 3em;
+    color: #eee;
+    margin-bottom: 50px;
+}
+.about h3:hover {
+    text-decoration: underline;
+}
+.Qualite {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Qualite div {
+    height: 200px;
+    width: 200px;
+    background-color: #ff85ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 2em;
+    transition: scale 0.5s;
+}
+.Qualite div:hover {
+    scale: 1.1;
+    transition: 0.5s;
+}
+.Qualite div:nth-child(2n+1) {
+    transform: translateY(30px) rotate(-45deg);
+}
+.Qualite div:nth-child(2n) {
+    transform: translateY(-30px) rotate(-45deg);
+}
+.Qualite div::after {
+    content: "";
+    background-color: #ff85ff;
+    position: absolute;
+    bottom: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.Qualite div::before {
+    content: "";
+    background-color: #ff85ff;
+    position: absolute;
+    left: 100px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.Qualite h4 {
+    z-index: 1;
+    transform: rotate(45deg);
+    position: absolute;
+}
+.Qualite div span {
+    z-index: 1;
+    position: absolute;
+    transform: translateX(40px) translateY(-40px) rotate(45deg);
+    font-size: 3em;
+}
+/* *******************appointment */
+.appointment {
+    display: flex;
+    padding: 50px 15%;
+    background-color: #ff85ff59;
+}
+.appointment div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-right: 50px;
+    text-decoration: underline
+}
+.appointment div:nth-child(1) form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+    column-gap: 150px;
+}
+.appointment div:nth-child(2) {
+    margin: auto;
+}
+.appointment div:nth-child(2) img {
+    width: 400px;
+}
+/* ***********************application */
+.application {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 15%;
+    background-color: rgba(104, 255, 255, 0.507);
+}
+.application div:nth-child(2) {
+    transform: translateY(30px);
+    width: 70%;
+    text-align: center;
+    color: rgb(53, 53, 53);
+}
+.application div:nth-child(2) * {
+    margin-bottom: 10px;
+}
+.application div:nth-child(2) a {
+    margin: 40px;
+    background-color: rgb(121, 235, 255);
+    box-shadow: 1px 1px 10px #111 ;
+    width: 200px;
+    height: 80px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #111;
+    display: inline-block;
+    padding: 28px;
+}
+.application div:nth-child(2) a:hover {
+    scale: 1.1;
+}
+.application img {
+    width: 300px;
+}
+/* **************************doctors */
+.Médecins {
+    padding: 50px 5%;
+}
+.MédecinsTop {
+    background-color: rgba(104, 255, 255, 0.507);
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
+    text-align: center;
+    color: rgb(82, 80, 80);
+}
+.MédecinsTop h3 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+.MédecinsTop h6 {
+    font-size: 1em;
+}
+.doctors {
+    display: flex;
+    justify-content: space-evenly;
+}
+.doctors div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.doctors div div {
+    transform: translateY(-30px);
+    opacity: 0;
+    font-size: 1.6em;
+    color: rgb(46, 46, 46);
+}
+.doctors div:hover div {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s;
+}
+/* ***************************blog */
+.newsHead {
+    margin-bottom: 40px;
+    background-color: #ffd4ff;
+    padding: 5px;
+    color: #222;
+}
+.articles div div a {
+    text-decoration: none;
+    color: #222;
+}
+.newsHead h3{
+    font-size: 2em;
+}
+.newsHead h6{
+    font-size: 1.3em;
+}
+.news {
+    padding: 50px 15%;
+}
+.articles {
+    display: flex;
+    flex-direction: column;
+}
+.articles div {
+    display: flex;
+    color: #222;
+    font-size: 1.3em;
+}
+.article1:hover, .article2:hover, .article3:hover {
+    scale: 1.05;
+}
+.articles div div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.articles img {
+    width: 250px;
+}
+.article1 {
+    background-color: #c65238ce;
+}
+.article2 {
+    flex-direction: row-reverse;
+    background-color: #00c7fec0;
+    text-align: right;
+}
+.article3 {
+    background-color: #e2d2ffc2;
+}
+/* ************************contact */
+.contact {
+    display: flex;
+    background-color: #b4b4b436;
+    padding: 50px 15%;
+}
